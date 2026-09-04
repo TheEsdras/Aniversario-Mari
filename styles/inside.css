@@ -260,4 +260,24 @@ a {
   object-fit: contain;
 }
   
+/* Estilo base de cada flor */
+.flower {
+  position: fixed;
+  top: -10%; /* Começa um pouco acima da tela */
+  z-index: 9999; /* Fica por cima de tudo */
+  user-select: none;
+  pointer-events: none; /* Garante que você consiga clicar no cartão e áudio através das flores */
+  animation: fall linear infinite;
+}
 
+/* Animação de queda e rotação */
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) scale(0.8); /* Cai até passar do fundo da tela */
+    opacity: 0;
+  }
+}

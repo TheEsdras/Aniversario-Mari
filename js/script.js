@@ -25,3 +25,4 @@ imagens.forEach(div => {
 function fecharZoom() {
   document.getElementById('modalZoom').style.display = 'none';
 }
+
