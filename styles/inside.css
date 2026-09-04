@@ -224,6 +224,7 @@ a {
     margin-left: 250px;
   }
 
+/* ... dentro do @media (max-width: 500px) ... */
   .btn-small {
     display: block;
   }
@@ -231,5 +232,32 @@ a {
   .btn-big {
     display: none;
   }
-  
+} /* <-- FECHE A CHAVE DO MEDIA QUERY AQUI */
+
+
+/* Estilos do Modal de Zoom (Agora disponível para Desktop e Mobile) */
+.foto-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
 }
+
+.foto-modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  object-fit: contain;
+}
+  
+
